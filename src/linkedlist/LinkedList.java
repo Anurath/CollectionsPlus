@@ -86,6 +86,48 @@ public class LinkedList {
 		return false;
 	}
 	
+	public boolean removeFirst()
+	{
+		if(head == null)
+		{
+			return false;
+		}
+		else if(head.nextRef!=null)
+		{
+			head = head.nextRef;
+			head.nextRef.prevRef = null;
+			size--;
+		}
+		else
+		{
+			head = null;
+			current = null;
+			size --;
+		}
+		return true;
+	}
+	
+	public boolean removeLast()
+	{
+		if(current == null)
+		{
+			return false;
+		}
+		else if(current.prevRef == null)
+		{
+			head = null;
+			current = null;
+			size--;
+		}
+		else {
+			current = current.prevRef;
+			current.nextRef = null;
+			size--;
+		}
+		return true;
+	}
+	
+	
 	public boolean addFirst(Object val)
 	{
 		if(head == null)
