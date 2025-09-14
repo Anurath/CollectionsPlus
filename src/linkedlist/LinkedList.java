@@ -1,5 +1,6 @@
 package linkedlist;
 
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class LinkedList {
@@ -7,6 +8,37 @@ public class LinkedList {
 	private int size;
 	Node head;
 	Node current;
+	
+	public LinkedList()
+	{
+		//No argument constructor
+	}
+	
+	public int size()
+	{
+		return size;
+	}
+	
+	public Object getFirst()
+	{
+		if (head == null) {
+	        throw new NoSuchElementException("List is empty");
+	    }
+	    return head.val;
+	}
+	
+	public Object getLast()
+	{
+		if (current == null) {
+	        throw new NoSuchElementException("List is empty");
+	    }
+	    return current.val;
+	}
+	
+
+	public boolean isEmpty() {
+		return head == null;
+	}
 	
 	public boolean addVal(Object val)
 	{
@@ -62,12 +94,14 @@ public class LinkedList {
 		else if(temp.nextRef == null && temp.prevRef != null)
 		{
 			current = temp.prevRef;
+			current.nextRef = null;
 			size--;
 			return true;
 		}
 		else if(temp.prevRef== null && temp.nextRef!= null)
 		{
 			head = temp.nextRef;
+			head.prevRef = null; 
 			size--;
 			return true;
 		}
@@ -95,7 +129,7 @@ public class LinkedList {
 		else if(head.nextRef!=null)
 		{
 			head = head.nextRef;
-			head.nextRef.prevRef = null;
+			head.prevRef= null;
 			size--;
 		}
 		else
