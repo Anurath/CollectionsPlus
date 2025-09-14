@@ -31,4 +31,8 @@ public class Node {
 	{
 		return prevRef != null;
 	}
+	public String toString()
+	{
+		return val.toString();
+	}
 }

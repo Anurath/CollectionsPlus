@@ -55,8 +55,11 @@ public class LinkedList {
 	public boolean removeNode(Object val)
 	{
 		Node temp = containsNode(val);
-		
-		if(temp.nextRef == null && temp.prevRef != null)
+		if(temp==null)
+		{
+			return false;
+		}
+		else if(temp.nextRef == null && temp.prevRef != null)
 		{
 			current = temp.prevRef;
 			size--;
@@ -81,5 +84,23 @@ public class LinkedList {
 			size--;
 		}
 		return false;
+	}
+	
+	public boolean addFirst(Object val)
+	{
+		if(head == null)
+		{
+			head = new Node(val);
+			current = head;
+			size++;
+		}
+		else {
+			Node temp = new Node(val);
+			head.prevRef = temp;
+			temp.nextRef = head;
+			head = temp;
+			size++;
+		}
+		return true;
 	}
 }
