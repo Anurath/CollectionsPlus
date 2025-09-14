@@ -35,7 +35,7 @@ public class LinkedList {
 			System.out.print(start.val+",");
 			start = start.nextRef;
 		}
-		System.out.print("]");
+		System.out.println("]");
 	}
 	
 	public Node containsNode(Object val)
@@ -100,6 +100,24 @@ public class LinkedList {
 			temp.nextRef = head;
 			head = temp;
 			size++;
+		}
+		return true;
+	}
+	
+	public boolean addLast(Object val)
+	{
+		addVal(val);
+		return true;
+	}
+	
+	public boolean addAll(LinkedList list)
+	{
+		Node start = list.head;
+		
+		while(start!=null)
+		{
+			addVal(start.val);
+			start = start.nextRef;
 		}
 		return true;
 	}
