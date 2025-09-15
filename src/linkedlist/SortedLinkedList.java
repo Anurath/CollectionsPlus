@@ -16,7 +16,7 @@ public class SortedLinkedList extends LinkedList {
 			{
 				if(start.prevRef==null)
 				{
-	 				addFirst(val);
+					super.addVal(val);
 					return true;
 				}
 				else
@@ -50,15 +50,15 @@ public class SortedLinkedList extends LinkedList {
 	}
 	
 	
-//	public boolean addFirst(Object val)
-//	{
-//		addVal(val);
-//		return true;
-//	}
-//	public boolean addLast(Object val)
-//	{
-//		addVal(val);
-//		return true;
-//	}
+	public boolean addFirst(Object val)
+	{
+		addVal(val);
+		return true;
+	}
+	public boolean addLast(Object val)
+	{
+		addVal(val);
+		return true;
+	}
 	
 }

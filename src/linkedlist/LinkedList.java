@@ -162,7 +162,7 @@ public class LinkedList {
 	}
 	
 	
-	public boolean addFirst(Object val)
+	private boolean addFirst(Object val)
 	{
 		if(head == null)
 		{
@@ -180,7 +180,7 @@ public class LinkedList {
 		return true;
 	}
 	
-	public boolean addLast(Object val)
+	private boolean addLast(Object val)
 	{
 		addVal(val);
 		return true;

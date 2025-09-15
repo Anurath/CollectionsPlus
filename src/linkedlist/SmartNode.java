@@ -20,7 +20,7 @@ public class SmartNode {
 	
 	public void  setCnt(int i)
 	{
-		cnt+=i;
+		cnt+=i;;
 	}
 	
 	public SmartNode next()
