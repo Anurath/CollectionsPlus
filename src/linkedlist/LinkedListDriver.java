@@ -56,6 +56,7 @@ public class LinkedListDriver {
 		sm1.addVal(20);
 		sm1.addVal(30);
 		sm1.addVal(50);
+		
 		System.out.println(sm1.getSize());
 		
 		sm1.iterator();

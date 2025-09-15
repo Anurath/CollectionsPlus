@@ -35,12 +35,10 @@ public class SmartLinkedList {
 	
 	public boolean addVal(Object val)
 	{
-		
-		
 		if(contains(val)!=null)
 		{
 			SmartNode temp =  contains(val);
-			temp.setCnt();
+			temp.setCnt(1);
 			return true;
 		}
 		
@@ -63,6 +61,48 @@ public class SmartLinkedList {
 		return true;
 	}
 	
+	public void clear()
+	{
+		head = null;
+		current = null;
+	}
+	
+	public boolean remove(Object val)
+	{
+		SmartNode temp = new SmartNode(val);
+		if(temp!=null)
+		{
+			System.out.println(temp.getCnt());
+			if(temp.getCnt()>1)
+			{
+				temp.setCnt(-1);
+				return true;
+			}
+			else if(temp.prevRef == null && temp.nextRef == null)
+			{
+			    System.out.println("asdfsf");
+				head = null;
+				current  = null;
+				return true;
+			}
+			
+			else if(temp.prevRef==null && temp.nextRef != null)
+			{
+				head = head.nextRef;
+				head.prevRef = null;
+				return true;
+			}
+			else if(temp.nextRef== null)
+			{
+				current = current.prevRef;
+				current.nextRef = null;
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	public void iterator()
 	{
 		SmartNode start = head;
@@ -79,5 +119,10 @@ public class SmartLinkedList {
 			start = start.nextRef;
 		}
 		System.out.println("]");
+	}
+	
+	public boolean isEmpty()
+	{
+		return getSize() == 0;
 	}
 }

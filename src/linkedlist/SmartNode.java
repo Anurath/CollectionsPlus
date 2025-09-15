@@ -18,9 +18,9 @@ public class SmartNode {
 		return cnt;
 	}
 	
-	public void  setCnt()
+	public void  setCnt(int i)
 	{
-		cnt++;
+		cnt+=i;
 	}
 	
 	public SmartNode next()
