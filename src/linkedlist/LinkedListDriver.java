@@ -33,25 +33,31 @@ public class LinkedListDriver {
 		
 		
 		
-		SortedLinkedList s1 = new SortedLinkedList();
-		
-		s1.addVal(10);
-		s1.addVal(20);
-		s1.addVal(400);
-		s1.addVal(40);
-		s1.addVal(30);
-		
-		SortedLinkedList s2 = new SortedLinkedList();
-		s2.addVal(100);
-		s2.addVal(15);
-		s2.addVal(25);
-		s2.addVal(50);
-		
-		
-		
-		s1.addFirst(20);
+//		SortedLinkedList s1 = new SortedLinkedList();
+//		
+//		s1.addVal(10);
+//		s1.addVal(20);
+//		s1.addVal(400);
+//		s1.addVal(40);
+//		s1.addVal(30);
+//		
+//		SortedLinkedList s2 = new SortedLinkedList();
+//		s2.addVal(100);
+//		s2.addVal(15);
+//		s2.addVal(25);
+//		s2.addVal(50);
+//		
+//		s1.iterate();
 		
 		
-		s1.iterate();
+		SmartLinkedList sm1 = new SmartLinkedList();
+		sm1.addVal(20);
+		sm1.addVal(30);
+		sm1.addVal(20);
+		sm1.addVal(30);
+		sm1.addVal(50);
+		System.out.println(sm1.getSize());
+		
+		sm1.iterator();
 	}
 }
