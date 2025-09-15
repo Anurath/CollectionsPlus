@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class LinkedList {
 
-	private int size;
+	public int size;
 	Node head;
 	Node current;
 	
