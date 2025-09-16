@@ -3,6 +3,7 @@ package linkedlist;
 public class SmartNode {
 
 	private short cnt=1;
+	
 	Object val;
 	
 	SmartNode prevRef;

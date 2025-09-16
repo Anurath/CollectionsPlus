@@ -13,7 +13,7 @@ public class SmartLinkedList {
 		//No argument constructor
 	}
 	
-	public int getSize()
+	public int size()
 	{
 		return size;
 	}
@@ -121,6 +121,6 @@ public class SmartLinkedList {
 	
 	public boolean isEmpty()
 	{
-		return getSize() == 0;
+		return size() == 0;
 	}
 }
