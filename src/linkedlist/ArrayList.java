@@ -43,14 +43,14 @@ public class ArrayList {
 		
 		if(idx>index)
 			return false;
-		if(idx==index)
+		if(idx==index-1)
 		{
-			arr[index+1] = arr[index];
-			arr[index] = val;
+			arr[index] = arr[index-1];
+			arr[index-1] = val;
 			index++;
 			return true;
 		}
-		else {
+		else if(idx<index-1) {
 			for(int i=index+1;i>idx;i--)
 			{
 				arr[i]=arr[i-1];
@@ -61,6 +61,8 @@ public class ArrayList {
 				resize();
 			return true;
 		}
+		System.out.println("Enter Valid Index!");
+		return false;
 	}
 	
 	public void iterator()
@@ -85,4 +87,68 @@ public class ArrayList {
 		size*=2;
 	}
 	
+	public Object get(int idx) {
+		if (idx >= index) {
+		    throw new ArrayIndexOutOfBoundsException("Index " + idx + " Array Ke Bahar Hai!");
+		}
+		return arr[idx];
+	}
+	
+	public boolean set(int idx,Object val)
+	{
+		if (idx >= index) {
+		    throw new ArrayIndexOutOfBoundsException("Index " + idx + " Array Ke Bahar Hai!");
+		}
+		arr[idx] = val;
+		return true;
+	}
+	
+	//Check Pointy
+	public boolean remove(int idx)
+	{
+		return true;
+	}
+	
+	public boolean remove(Object val)
+	{
+		return true;
+	}
+	
+	public int length()
+	{
+		return index;
+	}
+	
+	public void clear()
+	{
+		for(int i=0;i<index;i++)
+		{
+			arr[i] = null;
+		}
+		index = 0;
+	}
+	
+	public int indexOf(Object val)
+	{
+		for(int i=0;i<index;i++)
+		{
+			if(arr[i]==null && val == null || arr[i] != null && arr[i].equals(val))
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public int lastIndexOf(Object val)
+	{
+		for(int i = index-1;i>=0;i--)
+		{
+			if(arr[i]==null && val == null || arr[i] != null && arr[i].equals(val))
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
 }

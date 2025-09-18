@@ -67,10 +67,7 @@ public class LinkedListDriver {
 		a1.add(10);
 		a1.add(20);
 		a1.add(30);
-		System.out.println(a1.size());
-		System.out.println(a1.index());
-		a1.add(3, 40);
-		System.out.println(a1.index());
+		a1.set(0, 400);
 		a1.iterator();
 	}
 }
