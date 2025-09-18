@@ -62,12 +62,28 @@ public class LinkedListDriver {
 //		sm1.iterator();
 		
 		
-		ArrayList a1 = new ArrayList();
+//		ArrayList a1 = new ArrayList();
+//		
+//		a1.add(10);
+//		a1.add(20);
+//		a1.add(30);
+//		a1.set(0, 400);
+//		a1.iterator();
 		
-		a1.add(10);
-		a1.add(20);
-		a1.add(30);
-		a1.set(0, 400);
-		a1.iterator();
+		
+		Stack s1 = new Stack();
+		
+		s1.push(10);
+		s1.push(20);
+		s1.push(30);
+		
+		System.out.println(s1.isEmpty());
+		while(s1.head!=null)
+		{
+			System.out.println(s1.pop());
+		}
+		
+		System.out.println(s1.peek());;
+		System.out.println(s1.isEmpty());
 	}
 }
