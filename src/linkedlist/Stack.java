@@ -6,6 +6,11 @@ public class Stack {
 
 	Node head;
 	
+	public int size()
+	{
+		return size;
+	}
+	
 	public boolean push(Object val)
 	{
 		Node newNode = new Node(val);
