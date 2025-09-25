@@ -82,8 +82,6 @@ public class LinkedListDriver {
 		{
 			System.out.println(s1.pop());
 		}
-		
-		System.out.println(s1.peek());;
 		System.out.println(s1.isEmpty());
 	}
 }
