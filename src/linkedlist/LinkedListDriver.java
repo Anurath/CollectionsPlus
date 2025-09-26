@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.Stack;
+
 public class LinkedListDriver {
 
 	public static void main(String[] args) {
@@ -74,7 +76,7 @@ public class LinkedListDriver {
 		
 		
 		
-		Stack s1 = new Stack();
+		Stack<E> s1 = new Stack();
 		
 		s1.push(10);
 		s1.push(20);
@@ -89,5 +91,7 @@ public class LinkedListDriver {
 		System.out.println(s1.isEmpty());
 		
 		System.out.println(s1.size());
+
+		s1.add(20);
 	}
 }
