@@ -58,16 +58,17 @@ public class LinkedList {
 		return true;
 	}
 	
-	public void iterate()
+	public String toString()
 	{
 		Node start = head;
-		System.out.print("[");
+		String list ="[";
 		while(start!=null)
 		{
-			System.out.print(start.val+",");
+			list+=start.val+",";
 			start = start.nextRef;
 		}
-		System.out.println("]");
+		list+="]";
+		return list;
 	}
 	
 	public Node containsNode(Object val)

@@ -90,17 +90,17 @@ public class Stack {
 	
 	
 	//Pending work
-	public int search(Object val)
-	{
-		Node start = current;
-		int temp = size;
-		while(start!=null)
-		{
-			if(start.val.equals(val));
-			{
-				ret;
-			}
-		}
-			
-	}
+//	public int search(Object val)
+//	{
+//		Node start = current;
+//		int temp = size;
+//		while(start!=null)
+//		{
+//			if(start.val.equals(val));
+//			{
+//				ret;
+//			}
+//		}
+//			
+//	}
 }

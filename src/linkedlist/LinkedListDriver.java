@@ -76,19 +76,29 @@ public class LinkedListDriver {
 		
 		
 		
-		Stack s1 = new Stack();
+//		Stack s1 = new Stack();
+//		
+//		s1.push(10);
+//		s1.push(20);
+//		s1.push(30);
+//		System.out.println(s1);	
+//		System.out.println(s1.size());
+//		System.out.println(s1.isEmpty());
+//		
+//		System.out.println(s1.isEmpty());
+//		
+//		System.out.println(s1.size());
+//
+//		s1.add(20);
 		
-		s1.push(10);
-		s1.push(20);
-		s1.push(30);
-		System.out.println(s1);	
-		System.out.println(s1.size());
-		System.out.println(s1.isEmpty());
 		
-		System.out.println(s1.isEmpty());
-		
-		System.out.println(s1.size());
-
-		s1.add(20);
+		LinkedList l1 = new LinkedList();
+		l1.addVal(10);
+		l1.addVal(50);
+		l1.addVal(20);
+		l1.addVal(30);
+		l1.addVal(40);
+		l1.addVal(5);
+		System.out.println(l1);
 	}
 }
